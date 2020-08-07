@@ -30,8 +30,8 @@ body {
 
   background: linear-gradient(
     to right,
-    hsla(217, 89%, 61%, 0.6),
-    hsla(222, 11%, 24%, 0.6)
+    hsla(217, 89%, 61%, 0.4),
+    hsla(222, 11%, 24%, 0.4)
   );
   height: 100vh;
 }
@@ -82,11 +82,6 @@ a {
   text-decoration: none;
   margin: 1vw;
 }
-
-nav a:hover {
-  font-size: 1.5vw;
-}
-
 h3 {
   text-align: center;
   font-size: 4vw;
@@ -287,7 +282,9 @@ textarea {
 #cambio button {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.486);
 }
-
+textarea {
+  resize: none;
+}
 .tamaño textarea {
   height: 20vh;
   background-color: white;
@@ -450,6 +447,8 @@ input {
   border-radius: 5px;
   text-align: left;
   margin: 5px;
+  color: white;
+  font-weight: 700;
 }
 
 #precio {
