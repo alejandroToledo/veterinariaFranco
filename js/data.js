@@ -42,8 +42,7 @@ if ("#contacto") {
     var apellido = document.getElementById("apellido").value
     var telefono = document.getElementById("telefono").value
     var mensaje = document.getElementById("msg").value
-    var perro = document.getElementById("perro").value
-    var gato = document.getElementById("gato").value
+    var mascota = document.getElementsByClassName("mascota").value
 
     if (nombre.length > 0 && apellido.length > 0 && telefono.length > 0 && mensaje.length > 0) {
       desaparecer.style.display = "none";
