@@ -30,14 +30,29 @@ if ("#app") {
     }
   }
 }
-
 if ("#contacto") {
   var boton = document.getElementById("enviar");
   var desaparecer = document.getElementById("cambio");
   var aparecer = document.getElementById("pata");
 
+
   boton.addEventListener("click", function () {
-    desaparecer.style.display = "none";
-    aparecer.style.display = "flex";
+    event.preventDefault()
+    var nombre = document.getElementById("nombre").value
+    var apellido = document.getElementById("apellido").value
+    var telefono = document.getElementById("telefono").value
+    var mensaje = document.getElementById("msg").value
+    var perro = document.getElementById("perro").value
+    var gato = document.getElementById("gato").value
+
+    if (nombre.length > 0 && apellido.length > 0 && telefono.length > 0 && mensaje.length > 0) {
+      desaparecer.style.display = "none";
+      aparecer.style.display = "flex";
+    } else {
+      swal("Faltan completar datos!", " ", "error", {
+        button: "Segui completando :)",
+      })
+    }
+
   });
 }
