@@ -9,7 +9,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-
     <title>Juguetes | Franco Veterinaria</title>
 
 </head>
@@ -44,7 +43,7 @@
                 </div>
 
                 <div class="ola" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
-                        preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                        preserveAspectRatio="none" style="height: 80%; width: 100%;">
                         <path d="M0.00,49.98 C149.99,150.00 331.55,-87.33 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                             style="stroke: none; fill: rgb(255, 255, 255);"></path>
                     </svg></div>
@@ -58,14 +57,16 @@
             <div>
                 <ul class="listaProductos">
                     <li v-for="juguete in jugueteria">
-                        <div class="container">
+                        <div class="contenedor">
                             <div class="card">
                                 <img v-bind:src="juguete.imagen">
-                                <h4 id="stock" v-if="juguete.stock < 5"> Ultimas unidades</h4>
-                                <h4>{{juguete.nombre}}</h4>
-                                <h4>${{juguete.precio}}</h4>
-                                <p id="envio">Envio gratis</p>
-                                <a href="#">Leer más</a>
+                                <div id="linea">
+                                    <h4 id="stock" v-if="juguete.stock < 5"> Ultimas unidades</h4>
+                                    <h4 id="precio">$ {{juguete.precio}}</h4>
+                                    <h4>{{juguete.nombre}}</h4>
+                                    <p id="envio">Envio gratis</p>
+                                    <a href="#">Leer más</a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -73,16 +74,33 @@
             </div>
         </section>
         <footer>
-            <div>
-                <img src="imagenes/logo3.png" alt="">
-
+            <div id="footer">
+                <div>
+                    <img src="imagenes/logo3.png" alt="" />
+                </div>
+                <hr>
+                <div>
+                    <nav id="links">
+                        <div>
+                            <a href="index.html">INICIO</a>
+                            <a href="contacto.html">CONTACTO</a>
+                        </div>
+                        <div>
+                            <a href="farmacia.html">FARMACIA</a>
+                            <a href="juguetes.html">JUGUETERIA</a>
+                        </div>
+                    </nav>
+                </div>
+                <hr>
+                <div class="infoContacto" id="redes">
+                    <a href="www.facebook.com/Franco-Veterinaria-599325250750968"><img src="imagenes/facebook.png"
+                            alt=""></a>
+                    <a href="www.instagram.com/franco_veterinaria/"><img src="imagenes/instagram.png" alt=""></a>
+                    <a href="twitter.com/FrancoVeterina1"><img src="imagenes/twitter.png" alt=""></a>
+                </div>
             </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+            <hr>
+            <p>Todos los derecho reservados || Franco Vererinaria 2020</p>
         </footer>
     </div>
 
