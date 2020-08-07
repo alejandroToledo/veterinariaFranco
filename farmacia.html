@@ -52,53 +52,57 @@
         <section>
             <div class="titulos">
                 <img src="imagenes/dog.png" alt="">
-                <h3>Juguetes</h3>
+                <h3>Farmacia</h3>
             </div>
             <div>
                 <ul class="listaProductos">
-                    <li v-for="medicamentos in farmacia">
-                        <div class="container">
+                    <li v-for="medicamento in farmacia">
+                        <div class="contenedor">
                             <div class="card">
-                                <img v-bind:src="medicamentos.imagen">
-                                <h4 id="stock" v-if="medicamentos.stock < 5"> Ultimas unidades</h4>
-                                <h4>${{medicamentos.precio}}</h4>
-                                <h4>{{medicamentos.nombre}}</h4>
-                                <p id="envio">Envio gratis</p>
-                                <a href="#">Leer más</a>
+                                <img v-bind:src="medicamento.imagen">
+                                <div id="linea">
+                                    <h4 id="precio">$ {{medicamento.precio}}</h4>
+                                    <h4>{{medicamento.nombre}}</h4>
+                                    <p id="envio">Envio gratis</p>
+                                    <p id="descripcion">{{medicamento.descripcion}}</p>
+                                    <h4 id="stock" v-if="medicamento.stock < 5"> Ultimas unidades!!</h4>
+                                </div>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <footer>
-                <div id="footer">
-                    <div>
-                        <img src="imagenes/logo3.png" alt="" />
-                    </div>
-                    <hr>
-                    <div>
-                        <nav id="links">
-                            <div>
-                                <a href="index.html">INICIO</a>
-                                <a href="contacto.html">CONTACTO</a>
-                            </div>
-                            <div>
-                                <a href="farmacia.html">FARMACIA</a>
-                                <a href="juguetes.html">JUGUETERIA</a>
-                            </div>
-                        </nav>
-                    </div>
-                    <hr>
-                    <div class="infoContacto" id="redes">
-                        <a href="www.facebook.com/Franco-Veterinaria-599325250750968"><img src="imagenes/facebook.png"
-                                alt=""></a>
-                        <a href="www.instagram.com/franco_veterinaria/"><img src="imagenes/instagram.png" alt=""></a>
-                        <a href="twitter.com/FrancoVeterina1"><img src="imagenes/twitter.png" alt=""></a>
-                    </div>
+        </section>
+        <footer>
+            <div id="footer">
+                <div>
+                    <img src="imagenes/logo3.png" alt="" />
                 </div>
                 <hr>
-                <p>Todos los derecho reservados || Franco Vererinaria 2020</p>
-            </footer>
+                <div>
+                    <nav id="links">
+                        <div>
+                            <a href="index.html">INICIO</a>
+                            <a href="contacto.html">CONTACTO</a>
+                        </div>
+                        <div>
+                            <a href="farmacia.html">FARMACIA</a>
+                            <a href="juguetes.html">JUGUETERIA</a>
+                        </div>
+                    </nav>
+                </div>
+                <hr>
+                <div class="infoContacto" id="redes">
+                    <a href="https://www.facebook.com/Franco-Veterinaria-599325250750968"><img
+                            src="imagenes/facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com/franco_veterinaria/"><img src="imagenes/instagram.png"
+                            alt=""></a>
+                    <a href="https://twitter.com/FrancoVeterina1"><img src="imagenes/twitter.png" alt=""></a>
+                </div>
+            </div>
+            <hr>
+            <p>Todos los derecho reservados || Franco Vererinaria 2020</p>
+        </footer>
     </div>
 
     <!-- CODIGO -->

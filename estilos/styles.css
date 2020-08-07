@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+  color: #141414;
 }
 
 /******************************************* HEADER *******************************************/
@@ -74,6 +75,10 @@ a {
   margin: 1vw;
 }
 
+nav a:hover {
+  font-size: 1.5vw;
+}
+
 h3 {
   text-align: center;
   font-size: 4vw;
@@ -88,6 +93,11 @@ button {
   width: 15vw;
   height: 10vh;
   font-size: 1.5vw;
+}
+
+button:hover {
+  background: rgb(255, 81, 113);
+  ;
 }
 
 #boton {
@@ -147,6 +157,10 @@ button {
 /******************************************* SECTION *******************************************/
 /************* INDEX *************/
 /* NUESTRA HISTORIA */
+span {
+  font-weight: 600;
+}
+
 .contenedorHistoria {
   padding: 20px 0 60px 0;
   display: flex;
@@ -158,27 +172,35 @@ button {
 }
 
 #historia {
-  width: 45%;
+  width: 30%;
   font-size: 18px;
   padding-top: 18px;
 }
 
+#historia p {
+  margin-top: 2vh;
+}
+
 /* MAPA */
-#mapas {
+#mapa {
   display: flex;
   justify-content: space-evenly;
   padding: 5vh 0;
 }
 
-.titulos {
-  display: flex;
-  justify-content: center;
+iframe {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.486);
+  border: none;
 }
 
 h2 {
   font-size: 4em;
+  font-weight: 500;
   text-align: center;
-  color: #1b2458;
+}
+
+#donde {
+  margin-top: 2vh;
 }
 
 #seccionMapa {
@@ -196,7 +218,6 @@ h2 {
   font-size: 40px;
   font-weight: 600;
   background-color: #1b2458;
-  color: white;
   align-items: center;
   justify-content: center;
 }
@@ -206,11 +227,15 @@ h2 {
   margin-right: 2vw;
 }
 
+#llamada p {
+  color: white;
+}
+
 /************* CONTACTO *************/
 .infoContacto {
   display: flex;
   align-items: center;
-  margin: 1vh 0;
+  margin: 3vh 0;
 }
 
 .infoContacto p {
@@ -242,6 +267,13 @@ textarea {
   width: 30vw;
   height: 5vh;
   margin-bottom: 2vh;
+  background: rgba(206, 71, 96, 0.103);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.486);
+  border: none;
+}
+
+#cambio button {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.486);
 }
 
 .tamaño textarea {
@@ -275,22 +307,23 @@ textarea {
 .contenedor {
   width: 100%;
   max-width: 1200px;
-  height: 400px;
+  height: 450px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2vh;
+  margin-bottom: 20vh;
 }
 
 .contenedor .card {
-  width: 300px;
-  height: 400px;
+  width: 330px;
+  height: 450px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  margin: 4vh 2vw;
+  margin: 8vh 2vw;
   transition: all 0.25s;
   text-align: center;
+  padding: 3vw 2vh;
 }
 
 .contenedor .card:hover {
@@ -307,12 +340,14 @@ textarea {
 .contenedor .card h4 {
   font-weight: 300;
   font-size: 1em;
+  text-align: left;
 }
 
 .contenedor .card p {
-  padding: 0;
+  padding: 2px;
   font-size: 0.5em;
   font-weight: 300;
+  text-align: left;
 }
 
 .contenedor .card a {
@@ -331,20 +366,29 @@ textarea {
   color: green;
   font-weight: 300;
   font-size: 1em;
+  text-align: left;
 }
 
 #stock {
   display: inline-block;
   background: #ce4760;
-  font-size: 12px;
+  font-size: 16px;
   padding: 4px 8px;
   text-align: left;
   border-radius: 5px;
+  text-align: left;
+  margin: 5px;
 }
 
 #precio {
   font-size: 24px;
   padding: 0;
+  text-align: left;
+}
+
+#descripcion {
+  font-size: 0.9em;
+  text-align: left;
 }
 
 li {
@@ -359,12 +403,11 @@ li {
 /******************************************* FOOTER *******************************************/
 footer {
   background-color: #1b2458;
+  margin-top: 15vh;
 }
 
 #footer {
-
   padding: 4vw;
-  margin-top: 6vh;
   display: flex;
   justify-content: space-between;
 }
