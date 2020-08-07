@@ -26,13 +26,13 @@ body {
 
 #gradiente {
   background: #373b44;
-  background: -webkit-linear-gradient(to right,
-      #4286f4,
-      #373b44);
+  background: -webkit-linear-gradient(to right, #4286f4, #373b44);
 
-  background: linear-gradient(to right,
-      hsla(217, 89%, 61%, 0.6),
-      hsla(222, 11%, 24%, 0.6));
+  background: linear-gradient(
+    to right,
+    hsla(217, 89%, 61%, 0.6),
+    hsla(222, 11%, 24%, 0.6)
+  );
   height: 100vh;
 }
 
@@ -105,7 +105,6 @@ button {
 
 button:hover {
   background: rgb(255, 81, 113);
-  ;
 }
 
 #boton {
@@ -202,7 +201,6 @@ span {
   display: flex;
   justify-content: center;
   padding: 5vh 0;
-
 }
 
 iframe {
@@ -259,14 +257,9 @@ h2 {
 .infoContacto p {
   margin-left: 1vw;
 }
-
-#redes img {
-  margin-right: 2vw;
-}
-
 #divContacto {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 6vh 0;
 }
 
@@ -327,6 +320,7 @@ textarea {
   background: #d2e4ff;
   padding: 50px;
   padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 5px;
   width: 30vw;
 }
@@ -370,7 +364,14 @@ input {
   height: 20vh;
   font-weight: 600;
 }
-
+#redesContacto a,
+#redes img {
+  margin-left: 0;
+  margin-right: 2vw;
+}
+#data {
+  width: 30vw;
+}
 /************* JUGUETERIA Y FARMACIA *************/
 /* CARDS */
 .contenedor {
@@ -381,7 +382,6 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20vh;
-
 }
 
 .contenedor .card {
@@ -393,7 +393,7 @@ input {
   margin: 8vh 2vw;
   transition: all 0.25s;
   text-align: center;
-  padding: 3vw 2vh;
+  padding: 6vh 2vw;
   background-color: white;
   border: 1px solid rgba(128, 128, 128, 0.527);
 }
@@ -456,11 +456,15 @@ input {
   font-size: 24px;
   padding: 0;
   text-align: left;
+  font-weight: 500;
 }
 
 #descripcion {
   font-size: 0.9em;
   text-align: left;
+}
+#nombreCompra {
+  font-weight: 600;
 }
 
 li {

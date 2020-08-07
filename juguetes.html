@@ -62,11 +62,12 @@
                             <div class="card">
                                 <img v-bind:src="juguete.imagen">
                                 <div id="linea">
-                                    <h4 id="precio">$ {{juguete.precio}}</h4>
-                                    <h4>{{juguete.nombre}}</h4>
-                                    <p id="envio">Envio gratis</p>
-                                    <p id="descripcion">{{juguete.descripcion}}</p>
                                     <h4 id="stock" v-if="juguete.stock < 5"> Ultimas unidades!!</h4>
+                                    <h4 id="precio">$ {{juguete.precio}}</h4>
+                                    <h4 id="nombreCompra">{{juguete.nombre}}</h4>
+                                    <p id="envio" v-if="juguete.stock > 5">Envio gratis</p>
+                                    <p id="descripcion">{{juguete.descripcion}}</p>
+
                                 </div>
                             </div>
                         </div>
